@@ -1,0 +1,24 @@
+td, th{
+    padding: 5px;
+    border: 1px solid;
+    position: relative;
+}
+td input{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.save-button{
+    border: none;
+    padding: 0;
+}
+.save-button:hover{
+    background: none;
+    transform: scale(1.2);
+}
+.change-mark{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 12px;
+}

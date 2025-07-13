@@ -1,0 +1,39 @@
+# React .gitignore
+
+# Dependencies
+/node_modules/
+/.pnp
+.pnp.js
+
+# Build
+/build/
+/.next/
+/out/
+
+# Cache
+/.cache
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env.local
+.env.development
+.env.production
+.env.test
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Misc
+*.log
+.svelte-kit

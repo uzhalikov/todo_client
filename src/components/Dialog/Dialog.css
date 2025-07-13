@@ -1,0 +1,20 @@
+
+.dialog-content{
+    border: 1px solid;
+    padding: 10px;
+    border-radius: 5px;
+    width: 300px;
+    position: fixed;
+    background: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.dialog-close{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
