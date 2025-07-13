@@ -7,10 +7,11 @@ const Login = () => {
   const { closeDialog, setNotification, isAdmin, setIsAdmin, fetchTasks } = useCtx();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const URL = 'https://todo-server-3q69.onrender.com'
 
   const login = async () => {
     try {
-      await axios.post('http://127.0.0.1:5000/api/login', { username, password }, { withCredentials: true });
+      await axios.post(`${URL}/api/login`, { username, password }, { withCredentials: true });
       setIsAdmin(true);
       fetchTasks();
       setNotification({
@@ -29,7 +30,7 @@ const Login = () => {
   };
 
   const logout = async () => {
-    await axios.post('http://127.0.0.1:5000/api/logout', {}, { withCredentials: true });
+    await axios.post(`${URL}/api/logout`, {}, { withCredentials: true });
     setIsAdmin(false);
     closeDialog();
     setNotification({

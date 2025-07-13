@@ -11,7 +11,7 @@ const TaskForm = () => {
   const submit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://127.0.0.1:5000/api/tasks', { username, email, text });
+      await axios.post('https://todo-server-3q69.onrender.com/api/tasks', { username, email, text });
       setUsername('');
       setEmail('');
       setText('');

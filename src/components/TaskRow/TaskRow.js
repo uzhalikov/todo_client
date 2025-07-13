@@ -11,7 +11,7 @@ const TaskRow = ({ task }) => {
 
   const save = async () => {
     try {
-      await axios.put(`http://127.0.0.1:5000/api/tasks/${task.id}`, {
+      await axios.put(`https://todo-server-3q69.onrender.com/api/tasks/${task.id}`, {
         text, completed
       }, { withCredentials: true });
       fetchTasks();

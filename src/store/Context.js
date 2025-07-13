@@ -13,6 +13,8 @@ export const Provider = ({ children }) => {
   const [dialogContent, setDialogContent] = useState(null);
   const [dialogTitle, setDialogTitle] = useState("");
 
+  const URL = 'https://todo-server-3q69.onrender.com'
+
   const dialogRef = useRef(null);
   const openDialog = (title, content) => {
     setDialogTitle(title);
@@ -24,14 +26,14 @@ export const Provider = ({ children }) => {
     dialogRef.current.close();
   };
   const fetchTasks = async (page = 1, sortBy = 'id', order = 'asc') => {
-    const res = await axios.get(`http://127.0.0.1:5000/api/tasks?page=${page}&sort_by=${sortBy}&order=${order}`, { withCredentials: true });
-    const count = await axios.get(`http://127.0.0.1:5000/api/tasks/count`);
+    const res = await axios.get(`${URL}/api/tasks?page=${page}&sort_by=${sortBy}&order=${order}`, { withCredentials: true });
+    const count = await axios.get(`${URL}/api/tasks/count`);
     setTasks(res.data);
     setTotal(count.data.total);
   };
 
   const checkAdmin = async () => {
-    const res = await axios.get('http://127.0.0.1:5000/api/is_admin', { withCredentials: true });
+    const res = await axios.get(`${URL}/api/is_admin`, { withCredentials: true });
     setIsAdmin(res.data.is_admin);
   };
 
